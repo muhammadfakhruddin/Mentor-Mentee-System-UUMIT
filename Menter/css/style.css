@@ -1,0 +1,32 @@
+﻿body {
+   background-color:#98AFC7;
+}
+.hcontain {
+    background-color: black;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0000A0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.footer1 {
+    background: #0000A0;
+    bottom:0px;
+    position:fixed;
+    left: 0px;
+    right:0px;
+}

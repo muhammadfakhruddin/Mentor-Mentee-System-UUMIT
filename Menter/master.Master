@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="Menter.master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap/datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="bootstrap/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1>
+    <img src="img/logouum-small-png.png" />MENTOR MENTEE</h1>
+    
+    <form id="form1" runat="server">
+    <div>
+
+        <ul>
+            <li><asp:LinkButton ID="Home" runat="server" OnClick="Home_Click">Home</asp:LinkButton></li>
+            <li><asp:LinkButton ID="Profiles" runat="server" OnClick="Profile_Click">Profile</asp:LinkButton></li>
+            <li><asp:LinkButton ID="Goals" runat="server" OnClick="Goals_Click">Goals & Objectives</asp:LinkButton></li>
+            <li><asp:LinkButton ID="Result" runat="server" OnClick="Result_Click">Result</asp:LinkButton></li>
+            <li><asp:LinkButton ID="Course" runat="server" OnClick="Course_Click" Visible="False">Course</asp:LinkButton></li>
+            
+        </ul>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+        <div class="footer1">
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a>Fakhruddin </a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+    </div>
+</body>
+</html>
