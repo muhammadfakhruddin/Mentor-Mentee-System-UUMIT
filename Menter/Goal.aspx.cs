@@ -1,20 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;  
 
 namespace Menter
 {
     public partial class Goal : System.Web.UI.Page
     {
         string strcon = ConfigurationManager.ConnectionStrings["MenterConnectionString"].ConnectionString;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                gvbind();
+            }
+        }
+
+        private void gvbind()
+        {
+            
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM goals", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            con.Close();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
+            }else
+            {
+                ds.Tables[0].Rows.Add(ds.Tables[0].NewRow());
+                GridView1.DataSource=ds;
+                GridView1.DataBind();
+                int columcount = GridView1.Rows[0].Cells.Count;
+                GridView1.Rows[0].Cells.Clear();
+                GridView1.Rows[0].Cells.Add(new TableCell());
+                GridView1.Rows[0].Cells[0].ColumnSpan = columcount;
+                GridView1.Rows[0].Cells[0].Text = "No Record Found";
+
+            }
 
         }
 
@@ -26,14 +64,9 @@ namespace Menter
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
-                if (con.State == System.Data.ConnectionState.Closed)
-                {
                     con.Open();
-                }
-
-                SqlCommand cmd = new SqlCommand("INSERT INTO goals(goal) VALUES (@Goal)",con);
-
-                cmd.Parameters.AddWithValue("@Goal",TextBox1.Text.Trim());
+                SqlCommand cmd = new SqlCommand("INSERT INTO goals(goal) VALUES (@submit)",con);
+                cmd.Parameters.AddWithValue("@submit",TextBox1.Text.Trim());
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -43,8 +76,24 @@ namespace Menter
             }
             catch (Exception ex) 
             {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                Response.Write("<script>alert('Failed');</script>");
             }
         }
+        //Delete button
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
+            Label lbldeleteid = (Label)row.FindControl("lblid");
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM goals where goal = '" + Convert.ToString(GridView1.DataKeys[e.RowIndex].Value.ToString()) + "'", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            e.RowIndex.ToString();
+            gvbind();
+        }
+
+
+
     }
 }

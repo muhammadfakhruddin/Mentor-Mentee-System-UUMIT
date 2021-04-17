@@ -1717,6 +1717,7 @@
     <Content Include="img\background.png" />
     <Content Include="img\logouum-small-png.png" />
     <Content Include="img\uum.jpg" />
+    <Content Include="login.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Result.aspx" />
     <Content Include="Web.config" />
@@ -1736,6 +1737,13 @@
     </Compile>
     <Compile Include="Goal.aspx.designer.cs">
       <DependentUpon>Goal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>

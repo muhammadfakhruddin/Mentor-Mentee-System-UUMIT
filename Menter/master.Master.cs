@@ -11,17 +11,17 @@ namespace Menter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["user"]="mentee";
+            Session["role"]="mentor";
             try
             {
-                if (Session["user"].Equals("mentor"))
+                if (Session["role"].Equals("mentor"))
                 {
                     Course.Visible = true;
                 }
             }
             catch (Exception ex)
             {
-
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
 
