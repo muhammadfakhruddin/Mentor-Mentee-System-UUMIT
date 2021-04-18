@@ -26,7 +26,6 @@
             <li><asp:LinkButton ID="Goals" runat="server" OnClick="Goals_Click">Goals & Objectives</asp:LinkButton></li>
             <li><asp:LinkButton ID="Result" runat="server" OnClick="Result_Click">Result</asp:LinkButton></li>
             <li><asp:LinkButton ID="Course" runat="server" OnClick="Course_Click" Visible="False">Course</asp:LinkButton></li>
-            
         </ul>
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

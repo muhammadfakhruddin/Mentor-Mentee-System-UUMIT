@@ -22,7 +22,6 @@ namespace Menter
         {
             if (!IsPostBack)
             {
-                Session["role"] = "mentee";
                 gvbind();
             }
         }

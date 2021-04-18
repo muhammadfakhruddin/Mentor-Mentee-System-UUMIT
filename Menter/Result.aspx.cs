@@ -27,9 +27,18 @@ namespace Menter
 
         private void gvbind()
         {
+            String sql;
+            if (Session["role"].Equals("mentor    "))
+            {
+                sql = "SELECT * FROM result WHERE matricno='" + Session["menter"] + "'";
+            }
+            else
+            {
+                sql = "SELECT * FROM result WHERE matricno='" + Session["user"] + "'";
+            }
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM result", con);
+            SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);

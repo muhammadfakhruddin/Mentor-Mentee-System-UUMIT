@@ -11,18 +11,11 @@ namespace Menter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["role"]="mentor";
-            try
+            if (Session["role"].Equals("mentor    "))
             {
-                if (Session["role"].Equals("mentor"))
-                {
-                    Course.Visible = true;
-                }
+                Course.Visible = true;
             }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-            }
+            else { Course.Visible = false; }
         }
 
         protected void Home_Click(object sender, EventArgs e)

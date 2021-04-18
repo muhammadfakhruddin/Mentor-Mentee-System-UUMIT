@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
     <div class="text-center">
-        <h1>Profiles</h1>
+        <h1>PROFILE</h1>
         <div class="container">
                             <div class="card-body">
 
@@ -115,14 +115,8 @@
                                         <td>&nbsp;</td>
                                     </tr>
                                 </table>
-
                 </div>
         </div>
     </div>
-
-
-
     </div>
-
-
 </asp:Content>

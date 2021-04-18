@@ -21,6 +21,14 @@ namespace Menter
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["role"].Equals("mentor    "))
+            {
+                Label.Visible = false;
+                TextBox1.Visible = false;
+                Goalsubmit.Visible = false;
+                gvbind();
+            }
             if (!IsPostBack)
             {
                 gvbind();
@@ -29,10 +37,18 @@ namespace Menter
 
         private void gvbind()
         {
-            
+            String sql;
+            if (Session["role"].Equals("mentor    "))
+            {
+                sql = "SELECT * FROM goals WHERE matricno='" + Session["menter"] + "'";
+            }
+            else 
+            {
+                sql = "SELECT * FROM goals WHERE matricno='" + Session["user"] + "'";
+            }
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM goals", con);
+            SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -65,7 +81,7 @@ namespace Menter
             {
                 SqlConnection con = new SqlConnection(strcon);
                     con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO goals(goal) VALUES (@submit)",con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO goals(goal,matricno) VALUES (@submit,"+Session["user"]+")",con);
                 cmd.Parameters.AddWithValue("@submit",TextBox1.Text.Trim());
 
                 cmd.ExecuteNonQuery();
@@ -86,7 +102,7 @@ namespace Menter
             Label lbldeleteid = (Label)row.FindControl("lblid");
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd = new SqlCommand("DELETE FROM goals where goal = '" + Convert.ToString(GridView1.DataKeys[e.RowIndex].Value.ToString()) + "'", con);
+            SqlCommand cmd = new SqlCommand("DELETE FROM goals where goal = '" + Convert.ToString(GridView1.DataKeys[e.RowIndex].Value.ToString()) + "'AND matricno ='" + Session["user"] + "'", con);
             cmd.ExecuteNonQuery();
             con.Close();
             e.RowIndex.ToString();

@@ -3,7 +3,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
+    <div class="container">
+        <div class="text-center">
+              <h1>RESULT</h1>
+        </div>
         <table style="width: 100%;">
             <tr>
                 <td>&nbsp;</td>

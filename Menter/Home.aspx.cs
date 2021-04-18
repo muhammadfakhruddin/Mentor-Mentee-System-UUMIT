@@ -12,6 +12,11 @@ namespace Menter
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = (String)Session["role"];
+            if (Session["role"] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
+
         }
     }
 }

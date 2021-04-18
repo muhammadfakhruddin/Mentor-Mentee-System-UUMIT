@@ -3,8 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<h1>Welcome To Mentor Mentee</h1>
+
     <div class="container">
+        <div class="text-center"><h1>Welcome To Mentor Mentee</h1></div>
         <a>This Is Mentor Mentee Web Page</a>
         <br />
         <a>You are,</a>
