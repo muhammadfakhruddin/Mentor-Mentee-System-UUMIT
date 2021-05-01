@@ -22,7 +22,7 @@ namespace Menter
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["role"].Equals("mentor    "))
+            if (Session["role"].Equals("mentor"))
             {
                 Label.Visible = false;
                 TextBox1.Visible = false;
@@ -38,7 +38,7 @@ namespace Menter
         private void gvbind()
         {
             String sql;
-            if (Session["role"].Equals("mentor    "))
+            if (Session["role"].Equals("mentor"))
             {
                 sql = "SELECT * FROM goals WHERE matricno='" + Session["menter"] + "'";
             }
@@ -92,7 +92,7 @@ namespace Menter
             }
             catch (Exception ex) 
             {
-                Response.Write("<script>alert('Failed');</script>");
+                Response.Write("<script>alert('"+ex.Message+"');</script>");
             }
         }
         //Delete button

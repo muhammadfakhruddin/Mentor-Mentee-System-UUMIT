@@ -28,37 +28,33 @@ namespace Menter
 
         private void gvbind()
         {
-            /*string strcon = ConfigurationManager.ConnectionStrings["MenterConnectionString"].ConnectionString;
+            string strcon = ConfigurationManager.ConnectionStrings["MenterConnectionString"].ConnectionString;
+            String sql;
             using (SqlConnection con = new SqlConnection(strcon))
             {
-                if (Session["role"] == "mentor")
+                if (Session["role"].Equals("mentor"))
                 {
-                    SqlCommand lct = new SqlCommand("Menter", con);
-                    lct.CommandType = CommandType.StoredProcedure;
+                    sql = "select * from mentor where staffno='" + Session["user"] + "'";
+                    SqlCommand lct = new SqlCommand(sql, con);
                     SqlDataAdapter sda = new SqlDataAdapter(lct);
                     con.Open();
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
-                }
-
-                if (Session["role"] == "mentee")
+                    FormView3.DataSource = dt;
+                    FormView3.DataBind();
+                }else
                 {
-                    SqlCommand lct = new SqlCommand("Menter", con);
-                    lct.CommandType = CommandType.StoredProcedure;
+                    sql = "select * from mentee where matricno='" + Session["user"] + "'";
+                    SqlCommand lct = new SqlCommand(sql, con);
                     SqlDataAdapter sda = new SqlDataAdapter(lct);
                     con.Open();
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
+                    FormView2.DataSource = dt;
+                    FormView2.DataBind();
 
                 }
-            }*/
+            }
         }
-
-        protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
-        {
-
-        }
-
-
         }
     }

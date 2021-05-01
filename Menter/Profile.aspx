@@ -2,7 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            width: 181px;
+            width: 20px;
+        }
+        .auto-style2 {
+            width: 656px;
         }
     </style>
 </asp:Content>
@@ -16,103 +19,77 @@
                                 <table style="width:80%;">
                                     <tr>
                                         <td class="auto-style1">&nbsp;</td>
-                                        <td> &nbsp;</td>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style2"> &nbsp;</td>
+                                        <td class="auto-style1">&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style1">&nbsp;</td>
-                                        <td>
-                                            <asp:FormView CssClass="text-start"  ID="FormView1" runat="server" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" DataSourceID="SqlDataSource1" GridLines="Horizontal" Width="470px">
-                                                <EditItemTemplate>
-                                                    matricno:
-                                                    <asp:TextBox ID="matricnoTextBox" runat="server" Text='<%# Bind("matricno") %>' />
-                                                    <br />
-                                                    name:
-                                                    <asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' />
-                                                    <br />
-                                                    programme:
-                                                    <asp:TextBox ID="programmeTextBox" runat="server" Text='<%# Bind("programme") %>' />
-                                                    <br />
-                                                    school:
-                                                    <asp:TextBox ID="schoolTextBox" runat="server" Text='<%# Bind("school") %>' />
-                                                    <br />
-                                                    gender:
-                                                    <asp:TextBox ID="genderTextBox" runat="server" Text='<%# Bind("gender") %>' />
-                                                    <br />
-                                                    email:
-                                                    <asp:TextBox ID="emailTextBox" runat="server" Text='<%# Bind("email") %>' />
-                                                    <br />
-                                                    semester:
-                                                    <asp:TextBox ID="semesterTextBox" runat="server" Text='<%# Bind("semester") %>' />
-                                                    <br />
-                                                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-                                                    &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                                                </EditItemTemplate>
-                                                <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
-                                                <FooterStyle BackColor="White" ForeColor="#333333" />
-                                                <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
-                                                <InsertItemTemplate>
-                                                    matricno:
-                                                    <asp:TextBox ID="matricnoTextBox" runat="server" Text='<%# Bind("matricno") %>' />
-                                                    <br />
-                                                    name:
-                                                    <asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' />
-                                                    <br />
-                                                    programme:
-                                                    <asp:TextBox ID="programmeTextBox" runat="server" Text='<%# Bind("programme") %>' />
-                                                    <br />
-                                                    school:
-                                                    <asp:TextBox ID="schoolTextBox" runat="server" Text='<%# Bind("school") %>' />
-                                                    <br />
-                                                    gender:
-                                                    <asp:TextBox ID="genderTextBox" runat="server" Text='<%# Bind("gender") %>' />
-                                                    <br />
-                                                    email:
-                                                    <asp:TextBox ID="emailTextBox" runat="server" Text='<%# Bind("email") %>' />
-                                                    <br />
-                                                    semester:
-                                                    <asp:TextBox ID="semesterTextBox" runat="server" Text='<%# Bind("semester") %>' />
-                                                    <br />
-                                                    <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                                                    &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                                                </InsertItemTemplate>
+                                        <td class="auto-style2">
+                                            <asp:FormView ID="FormView3" runat="server" CssClass="container">
                                                 <ItemTemplate>
-                                                    Matric Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-                                                    <asp:Label ID="matricnoLabel" runat="server" Text='<%# Bind("matricno") %>' />
-                                                    <br />
-                                                    Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-                                                    <asp:Label ID="nameLabel" runat="server" Text='<%# Bind("name") %>' />
-                                                    <br />
-                                                    Programme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :
-                                                    <asp:Label ID="programmeLabel" runat="server" Text='<%# Bind("programme") %>' />
-                                                    <br />
-                                                    School&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-                                                    <asp:Label ID="schoolLabel" runat="server" Text='<%# Bind("school") %>' />
-                                                    <br />
-                                                    Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :
-                                                    <asp:Label ID="genderLabel" runat="server" Text='<%# Bind("gender") %>' />
-                                                    <br />
-                                                    Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; :
-                                                    <asp:Label ID="emailLabel" runat="server" Text='<%# Bind("email") %>' />
-                                                    <br />
-                                                    Semester&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :
-                                                    <asp:Label ID="semesterLabel" runat="server" Text='<%# Bind("semester") %>' />
-                                                    <br />
-
+                                                    <table class="table table-bordered table-striped text-start">
+                                                        <tr>
+                                                            <td>Staff Number</td>
+                                                            <td><%#Eval("staffno") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td><%#Eval("name") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>School</td>
+                                                            <td><%#Eval("school") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gender</td>
+                                                            <td><%#Eval("gender") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Email</td>
+                                                            <td><%#Eval("email") %></td>  
+                                                        </tr>
+                                                    </table>
                                                 </ItemTemplate>
-                                                <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
-                                                <RowStyle BackColor="White" ForeColor="#333333" />
                                             </asp:FormView>
-                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MenterConnectionString %>" SelectCommand="SELECT * FROM [student]"></asp:SqlDataSource>
                                         </td>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style1">&nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style1">&nbsp;</td>
-                                        <td>
+                                        <td class="auto-style2">
+                                            <asp:FormView CssClass="container" ID="FormView2" runat="server">
+                                                <ItemTemplate>
+                                                    <table class="table table-bordered table-striped text-start">
+                                                        <tr>
+                                                            <td>Matric Number</td>
+                                                            <td><%#Eval("matricno") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td><%#Eval("name") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Programme</td>
+                                                            <td><%#Eval("programme") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>School</td>
+                                                            <td><%#Eval("school") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gender</td>
+                                                            <td><%#Eval("gender") %></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Email</td>
+                                                            <td><%#Eval("email") %></td>  
+                                                        </tr>
+                                                    </table>
+                                                </ItemTemplate>
+                                            </asp:FormView>
                                             <br />
                                         </td>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style1">&nbsp;</td>
                                     </tr>
                                 </table>
                 </div>

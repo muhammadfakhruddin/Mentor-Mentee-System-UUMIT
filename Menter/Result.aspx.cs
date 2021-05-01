@@ -28,7 +28,7 @@ namespace Menter
         private void gvbind()
         {
             String sql;
-            if (Session["role"].Equals("mentor    "))
+            if (Session["role"].Equals("mentor"))
             {
                 sql = "SELECT * FROM result WHERE matricno='" + Session["menter"] + "'";
             }

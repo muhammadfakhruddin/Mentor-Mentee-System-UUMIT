@@ -16,7 +16,6 @@ namespace Menter
             {
                 Response.Redirect("login.aspx");
             }
-
         }
     }
 }

@@ -51,7 +51,7 @@ namespace Menter
             {
                 Response.Write(ex.Message);
                 Response.Write("<script>alert('"+TextBox1.Text+"');</script>");
-            }  
+            }
         }
 
         /*protected void Button1_Click(object sender, EventArgs e)

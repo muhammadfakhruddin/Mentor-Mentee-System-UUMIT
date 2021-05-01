@@ -11,7 +11,7 @@ namespace Menter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["role"].Equals("mentor    "))
+            if (Session["role"].Equals("mentor"))
             {
                 Course.Visible = true;
             }
@@ -41,6 +41,11 @@ namespace Menter
         protected void Course_Click(object sender, EventArgs e)
         {
             Response.Redirect("Course.aspx");
+        }
+
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
         }
     }
 }

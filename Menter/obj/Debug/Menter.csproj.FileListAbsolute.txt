@@ -3,3 +3,8 @@ c:\users\al4ng\onedrive\lapa saing\documents\visual studio 2012\Projects\Menter\
 c:\users\al4ng\onedrive\lapa saing\documents\visual studio 2012\Projects\Menter\Menter\obj\Debug\Menter.dll
 c:\users\al4ng\onedrive\lapa saing\documents\visual studio 2012\Projects\Menter\Menter\obj\Debug\Menter.pdb
 C:\Users\AL4NG\OneDrive\lapa saing\documents\visual studio 2012\Projects\Menter\Menter\obj\Debug\Menter.csprojResolveAssemblyReference.cache
+D:\FYP\Menter\Menter\bin\Menter.dll
+D:\FYP\Menter\Menter\bin\Menter.pdb
+D:\FYP\Menter\Menter\obj\Debug\Menter.csprojResolveAssemblyReference.cache
+D:\FYP\Menter\Menter\obj\Debug\Menter.dll
+D:\FYP\Menter\Menter\obj\Debug\Menter.pdb

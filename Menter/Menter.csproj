@@ -1831,6 +1831,7 @@
     <Content Include="bootstrap\fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="bootstrap\fontawesome\webfonts\fa-solid-900.woff2" />
     <Content Include="master.Master" />
+    <None Include="Properties\PublishProfiles\fakhruddin.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1838,9 +1839,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bootstrap\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
