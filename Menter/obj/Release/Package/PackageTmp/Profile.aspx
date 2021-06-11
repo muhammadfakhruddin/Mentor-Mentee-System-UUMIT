@@ -84,10 +84,6 @@
                                                             <td>Email</td>
                                                             <td><%#Eval("email") %></td>  
                                                         </tr>
-                                                        <tr>
-                                                            <td>Semester</td>
-                                                            <td><%#Eval("semester") %></td>  
-                                                        </tr>
                                                     </table>
                                                 </ItemTemplate>
                                             </asp:FormView>

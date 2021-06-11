@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1>
-    <img src="img/logouum-small-png.png" />UUM MENTOR MENTEE</h1>
+    <img src="img/logouum-small-png.png" />UUM MENTORING SYSTEM</h1>
     
     <form id="form1" runat="server">
             <table class="logout" style="width: 100%;">
@@ -33,6 +33,8 @@
             <li><asp:LinkButton ID="Profiles" runat="server" OnClick="Profile_Click">Profile</asp:LinkButton></li>
             <li><asp:LinkButton ID="Goals" runat="server" OnClick="Goals_Click">Goals & Objectives</asp:LinkButton></li>
             <li><asp:LinkButton ID="Result" runat="server" OnClick="Result_Click">Result</asp:LinkButton></li>
+            <li><asp:LinkButton ID="CourseRegistration" runat="server" OnClick="CourseRegistration_Click">CourseRegistration</asp:LinkButton></li>
+            <li><asp:LinkButton ID="CourseConfirmation" runat="server" OnClick="CourseConfirmation_Click">CourseConfirmation</asp:LinkButton></li>
             <li><asp:LinkButton ID="Course" runat="server" OnClick="Course_Click" Visible="False">Course</asp:LinkButton></li>
         </ul>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

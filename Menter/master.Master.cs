@@ -14,8 +14,14 @@ namespace Menter
             if (Session["role"].Equals("mentor"))
             {
                 Course.Visible = true;
+                CourseRegistration.Visible = false;
+                CourseConfirmation.Visible = false;
             }
-            else { Course.Visible = false; }
+            else {
+                Course.Visible = false;
+                CourseRegistration.Visible = true;
+                CourseConfirmation.Visible = true;
+            }
         }
 
         protected void Home_Click(object sender, EventArgs e)
@@ -47,5 +53,16 @@ namespace Menter
         {
             Response.Redirect("login.aspx");
         }
+
+        protected void CourseRegistration_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CourseRegistration.aspx");
+        }
+
+        protected void CourseConfirmation_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CourseConfirmation.aspx");
+        }
+
     }
 }

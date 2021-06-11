@@ -7,10 +7,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\Users\AL4NG\OneDrive\Desktop</_PublishTargetUrl>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Menter.dll">
-      <publishTime>04/21/2021 17:43:08</publishTime>
+      <publishTime>06/03/2021 03:06:03</publishTime>
     </File>
     <File Include="bootstrap/css/bootstrap.min.css">
       <publishTime>04/20/2021 01:35:23</publishTime>
@@ -5137,7 +5139,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/10/2021 15:30:28</publishTime>
     </File>
     <File Include="Course.aspx">
-      <publishTime>04/20/2021 02:34:11</publishTime>
+      <publishTime>06/03/2021 00:33:37</publishTime>
+    </File>
+    <File Include="CourseConfirmation.aspx">
+      <publishTime>06/03/2021 03:06:03</publishTime>
+    </File>
+    <File Include="CourseRegistration.aspx">
+      <publishTime>06/03/2021 02:30:12</publishTime>
     </File>
     <File Include="css/style.css">
       <publishTime>04/20/2021 04:45:22</publishTime>
@@ -5161,16 +5169,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/20/2021 04:46:33</publishTime>
     </File>
     <File Include="master.Master">
-      <publishTime>04/20/2021 04:37:26</publishTime>
+      <publishTime>06/03/2021 02:32:31</publishTime>
     </File>
     <File Include="Profile.aspx">
-      <publishTime>04/19/2021 23:56:48</publishTime>
+      <publishTime>04/29/2021 00:37:32</publishTime>
     </File>
     <File Include="Result.aspx">
       <publishTime>04/20/2021 02:33:15</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/21/2021 17:43:19</publishTime>
+      <publishTime>06/03/2021 21:56:32</publishTime>
     </File>
   </ItemGroup>
 </Project>

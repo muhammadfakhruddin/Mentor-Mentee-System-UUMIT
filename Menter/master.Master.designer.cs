@@ -76,6 +76,24 @@ namespace Menter {
         protected global::System.Web.UI.WebControls.LinkButton Result;
         
         /// <summary>
+        /// CourseRegistration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton CourseRegistration;
+        
+        /// <summary>
+        /// CourseConfirmation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton CourseConfirmation;
+        
+        /// <summary>
         /// Course control.
         /// </summary>
         /// <remarks>

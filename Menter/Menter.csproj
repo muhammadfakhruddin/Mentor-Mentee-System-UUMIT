@@ -1712,6 +1712,8 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="Course.aspx" />
+    <Content Include="CourseConfirmation.aspx" />
+    <Content Include="CourseRegistration.aspx" />
     <Content Include="css\style.css" />
     <Content Include="Goal.aspx" />
     <Content Include="img\background.png" />
@@ -1730,6 +1732,20 @@
     </Compile>
     <Compile Include="Course.aspx.designer.cs">
       <DependentUpon>Course.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseConfirmation.aspx.cs">
+      <DependentUpon>CourseConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseConfirmation.aspx.designer.cs">
+      <DependentUpon>CourseConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseRegistration.aspx.cs">
+      <DependentUpon>CourseRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseRegistration.aspx.designer.cs">
+      <DependentUpon>CourseRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Goal.aspx.cs">
       <DependentUpon>Goal.aspx</DependentUpon>
